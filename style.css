@@ -115,6 +115,10 @@ body {
         height: 522px;
     }
 
+    .container:hover {
+        box-shadow: 14px 14px black;
+    }
+
     .article-img {
         width: 336px;
     }
@@ -136,6 +140,11 @@ body {
     .article-content h1 {
         font-size: 25px;
         line-height: 150%;
+    }
+
+    .article-content h1:hover {
+        color: yellow;
+        cursor: pointer;
     }
     
     .article-content .article-paragraph {
