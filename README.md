@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/ababaug/blog-preview-card-main]
+- Live Site URL: [https://ababaug.github.io/blog-preview-card-main/]
 
 ## My process
 
@@ -40,11 +40,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
@@ -55,48 +51,188 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<body>
+  <div class="container">
+    <header>
+      <div class="article-img">
+        <img src="./assets/images/illustration-article.svg" alt="" />
+      </div>
+    </header>
+    <main class="article-content">
+      <span class="article-nav">Learning</span>
+      <p class="article-pub">Published 21 Dec 2023</p>
+      <h1>HTML & CSS foundations</h1>
+      <p class="article-paragraph">
+        These languages are the backbone of every website, defining structure,
+        content, and presentation.
+      </p>
+    </main>
+    <footer class="article-footer">
+      <img src="./assets/images/image-avatar.webp" alt="" />
+      <p>Greg Hooper</p>
+    </footer>
+  </div>
+</body>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@font-face {
+  font-family: Figtree-italic;
+  src: url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Figtree;
+  src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Figtree-Extra;
+  src: url(assets/fonts/static/Figtree-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Figtree-semi;
+  src: url(assets/fonts/static/Figtree-SemiBold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 812px;
+  background-color: yellow;
+}
+
+.container {
+  background-color: white;
+  width: 327px;
+  height: 501px;
+  border-radius: 20px;
+  box-shadow: 8px 8px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.article-img {
+  width: 279px;
+  height: 200px;
+}
+
+.article-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.article-content {
+  width: 279px;
+  height: 173px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-content .article-nav {
+  background-color: yellow;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: Figtree-extra;
+  font-size: 12px;
+  width: 73px;
+}
+
+.article-content .article-pub {
+  font-family: Figtree;
+  font-size: 12px;
+}
+
+.article-content h1 {
+  font-family: Figtree-extra;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.article-content .article-paragraph {
+  font-family: Figtree-semi;
+  font-size: 14px;
+  line-height: 150%;
+  color: grey;
+}
+
+.article-footer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  align-self: flex-start;
+  padding: 0 24px;
+}
+
+.article-footer img {
+  width: 32px;
+  height: 32px;
+}
+
+.article-footer p {
+  font-family: Figtree-extra;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 384px;
+    height: 522px;
+  }
+
+  .container:hover {
+    box-shadow: 14px 14px black;
+  }
+
+  .article-img {
+    width: 336px;
+  }
+
+  .article-content {
+    width: 336px;
+    height: 194px;
+  }
+
+  .article-content .article-nav {
+    font-size: 14px;
+    width: 82px;
+  }
+
+  .article-content .article-pub {
+    font-size: 14px;
+  }
+
+  .article-content h1 {
+    font-size: 25px;
+    line-height: 150%;
+  }
+
+  .article-content h1:hover {
+    color: yellow;
+    cursor: pointer;
+  }
+
+  .article-content .article-paragraph {
+    font-size: 16px;
+    line-height: 150%;
+  }
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [https://www.linkedin.com/in/augustine-stephen-abah-51103090/]
+- Frontend Mentor - [@ababaug](https://www.frontendmentor.io/profile/ababaug)
